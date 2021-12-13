@@ -1,0 +1,71 @@
+*{
+    font-family: 'SangjuDajungdagam';
+}
+
+
+html{
+    background-color:lavender;
+}
+a{
+    color:blueviolet;
+}
+a:hover{
+    color:pink;
+}
+
+
+/* login */
+.loginForm{
+    background-color: lavenderblush;
+    display: block;
+    position: absolute;
+    left:30%;
+    width: 30%;
+    height: 65%;
+    border-radius: 0.3rem;
+    box-shadow:5px 5px 5px 5px rgba(137, 43, 226, 0.438);
+    padding: 2rem;
+    margin: 1rem;
+    border: lightcoral;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.idForm{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.3rem; 
+}
+.id {
+    width: 50%;
+    border:none;
+    border-bottom: 0.1rem solid rgba(137, 43, 226, 0.479);
+    outline:none;
+    color: #636e72d2;
+    font-size: 1rem;
+    height:1rem;
+    margin: 1rem;
+    padding:1rem;
+    background: none;
+
+}
+
+.btn {
+    margin-bottom: 20px;
+    width:30%;
+    height:40px;
+    background: linear-gradient(125deg,#81afec,#c05ce7,#df81ec);
+    background-position: left;
+    background-size: 200%;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    border:none;
+    border-radius: 3rem;
+    cursor:pointer;
+    transition: 0.4s;
+    text-align: center;
+}
+.btn:hover {
+    background-position: right;
+}

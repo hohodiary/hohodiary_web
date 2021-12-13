@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'blossom.html' %}
+<body>
+  <div style="margin:0;">
+    <a class="card" href={% url 'accountapp:login' %}>
+     당신의 연애를 기록하세요
+    </a>
+  </div>
+    <style>
+      @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+
+      .card {
+        width: 280px;
+        height: 20px;
+        padding: 2rem;
+        border-radius: 5rem;
+        text-align: center;
+        align-items: center;
+        font-size: 2rem;  
+        cursor: pointer;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #ff5dff8f, #e33cabc2 43%, #c200a8e8);
+          animation: spin 2.5s linear infinite;
+        color:ghostwhite;
+        text-decoration: none;
+        position: absolute;
+        left:37%;
+        top:80%;
+      }
+      .card:hover {
+        color: blue;
+        font-weight: bold;
+        transition: color 1s;
+        background-color: rgb(234, 235, 182);
+        animation: none;
+      }
+
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+    </style>
+  </body>
+{% endblock %}
