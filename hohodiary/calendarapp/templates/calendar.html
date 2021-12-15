@@ -2,17 +2,19 @@
 {% block content %}
 <body>
 <meta charset='utf-8' />
-    <link href='../../static/main.css' rel='stylesheet' />
-    <script src='../../static/main.js'></script>
+    <link href='../../static/fullcalendar/main.css' rel='stylesheet' />
+    <script src='../../static/fullcalendar/main.js'></script>
+    <script src='../../static/fullcalendar/ko.js'></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: 'ko',
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+            right: 'dayGridMonth,timeGridDay,listMonth'
           },
           initialDate: new Date(),
           navLinks: true, // can click day/week names to navigate views
@@ -64,6 +66,7 @@
         width: 70%;
         margin: 0 auto;
       }
+
     </style>
 
 
