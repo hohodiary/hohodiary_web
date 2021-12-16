@@ -7,51 +7,68 @@
     <script src='../../static/fullcalendar/ko.js'></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+  var calendarEl = document.getElementById('calendar');
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          locale: 'ko',
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridDay,listMonth'
-          },
-          initialDate: new Date(),
-          navLinks: true, // can click day/week names to navigate views
-          businessHours: true, // display business hours
-          editable: true,
-          selectable: true,
-          events: [
-            // {
-            //   title: 'Business Lunch',
-            //   start: '2021-12-03T13:00:00',
-            //   constraint: 'businessHours'
-            // },
-            // {
-            //   title: 'Conference',
-            //   start: '2020-09-18',
-            //   end: '2020-09-20'
-            // },
-            // // areas where "Meeting" must be dropped
-            // {
-            //   groupId: 'availableForMeeting',
-            //   start: '2020-09-11T10:00:00',
-            //   end: '2020-09-11T16:00:00',
-            //   display: 'background'
-            // },
-            // // red areas where no events can be dropped
-            // {
-            //   start: '2020-09-24',
-            //   end: '2020-09-28',
-            //   overlap: false,
-            //   display: 'background',
-            //   color: '#ff9f89'
-            // },
-          ]
-        });
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    eventClick: function(info) {
+      var eventObj = info.event;
 
-        calendar.render();
-      });
+      if (eventObj.url) {
+        alert(
+          'Clicked ' + eventObj.title + '.\n' +
+          'Will open ' + eventObj.url + ' in a new tab'
+        );
+
+        window.open(eventObj.url);
+
+        info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
+      } else {
+        alert('Clicked ' + eventObj.title);
+      }
+    },
+    initialDate: new Date(),
+    events: [
+      {
+        title: 'simple event',
+        start: '2021-12-02'
+      },
+      {
+        title: 'event with URL',
+        url: 'https://www.google.com/',
+        start: '2021-12-03'
+      }
+    ]
+    ,locale: 'ko',
+  });
+
+  calendar.render();
+});
+      // document.addEventListener('DOMContentLoaded', function() {
+      //   var calendarEl = document.getElementById('calendar');
+
+      //   var calendar = new FullCalendar.Calendar(calendarEl, {
+      //     locale: 'ko',
+      //     headerToolbar: {
+      //       left: 'prev,next today',
+      //       center: 'title',
+      //       right: 'dayGridMonth,timeGridDay,listMonth'
+      //     },
+      //     initialDate: new Date(),
+      //     navLinks: true, // can click day names to navigate views
+      //     businessHours: true, // display business hours
+      //     editable: true,
+      //     selectable: true,
+      //     events: [
+      //     {
+      //       title: 'event with URL',
+      //       url: 'https://www.google.com/',
+      //       start: '2021-12-03'
+      //     } 
+      //     ]
+      //   });
+
+      //   calendar.render();
+      // });
     </script>
 
     <style>
