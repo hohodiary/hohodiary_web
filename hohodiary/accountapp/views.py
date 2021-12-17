@@ -6,10 +6,10 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def blogin(request):
-    return render(request, 'blogin.html')
+    return render(request, 'accountapp/blogin.html')
 
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
     success_url = reverse_lazy('accountapp:blogin')
-    template_name = 'create.html'
+    template_name = 'accountapp/create.html'
