@@ -5,23 +5,25 @@
 {% block content %}
 
 <body>
-    <div class="createForm">
-    <form action="{% url 'accountapp:create' %}" method="post">{% csrf_token %}
-        <span style="font-size: 2rem;">회원 가입</span>
+    <div style="text-align: center;">
+    <span class="createForm">
+        <form action="{% url 'accountapp:create' %}" method="post">{% csrf_token %}
+            <span style="font-size: 2rem;">회원 가입</span>
         {% for field in form %}
-        <div class="idForm">
-            <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
-            <input type="{{ field.field.widget.input_type }}" class="id"
-                    id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}"/>
-        </div>
+            <div class="idForm">
+                <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
+                <input type="{{ field.field.widget.input_type }}" class="id"
+                        id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}"/>
+            </div>
         {% endfor %}
 
         {% if form.errors %}
             <span style="color: red; font-size: 1rem;font-weight: bold">필수 항목입니다</span>
         {% endif %}
-        <button type="submit" class="btn rounded-pill" onclick="button()">Create</button>
+            <button type="submit" class="btn rounded-pill" onclick="button()">Create</button>
     
-    </form>
+        </form>
+    </span>
     </div>
 </body>
 

@@ -2,26 +2,28 @@
 
 {% block content %}
 <body>
-    <div class="loginForm">
-    <form action="" method="post">{% csrf_token %}
-        <span style="font-size: 2rem;">Login</span>
+    <div style="text-align: center;">
+    <span class="loginForm">
+        <form action="" method="post">{% csrf_token %}
+            <span style="font-size: 2rem;">Login</span>
         {% for field in form %}
-        <div class="idForm">
-            <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
-            <input type="{{ field.field.widget.input_type }}" class="id"
-                   id="{{ field.id_for_label }}" name="{{ field.name }}"/>
-        </div>
+            <div class="idForm">
+                <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
+                <input type="{{ field.field.widget.input_type }}" class="id"
+                    id="{{ field.id_for_label }}" name="{{ field.name }}"/>
+            </div>
         {% endfor %}
 
         {% if form.errors %}
             <span style="color: red; font-size: 1rem;font-weight: bold">필수 항목입니다</span>
         {% endif %}
-
-        <button type="submit" class="btn" onclick="button()">Log in</button>
+            <button type="submit" class="btn" onclick="button()">Log in</button>
+            
             <div>
                 <a style="font-size: 1.3rem" href={% url 'accountapp:create' %}> 회원 가입 </a>
             </div>
-    </form>
+        </form>
+    </span>
     </div>
 </body>
 

@@ -7,25 +7,27 @@
 
 <div style="text-align: center;">
     <nav>
-    <span style="padding: 1rem;">
-        <a href="{% url 'accountapp:logout' %}">
-            Logout
-        </a>
-    </span>
-    <span style="padding: 1rem;">
-        <a href="{% url 'calendarapp:calendar' %}">
-            Mypage
-        </a>
-    </span>
+        <span style="padding: 1rem;">
+            <a href="{% url 'accountapp:logout' %}">
+                Logout
+            </a>
+        </span>
+        <span style="padding: 1rem;">
+            <a href="{% url 'calendarapp:calendar' %}">
+                Mypage
+            </a>
+        </span>
     </nav>
 </div>
 
     <hr style="margin: 1rem;border: 0; height: 1px; background-color: rgba(137, 43, 226, 0.253); width: 80%;">
     
 {% else %}
+
 <div style="text-align: center; font-size: 3rem; margin: 2rem;">
-    <a style="text-decoration: none; color: ghostwhite;" href="{% url 'accountapp:blogin' %}">
+    <a style="text-decoration: none; color: rgb(240, 155, 176);" href="{% url 'accountapp:blogin' %}">
         우리들의 비밀 이야기
     </a>
 </div>
+
 {% endif %}
