@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+  
+  <style>
+    html,body{
+      width: 100%;
+      height: 100%;
+      margin:0;
+    }
+    header,footer{
+      background:none;
+      position: relative;
+      margin:0;
+    }
+    #blogin_img1{
+      background:url('https://cdn.pixabay.com/photo/2019/10/21/08/28/couple-4565426_960_720.jpg')center no-repeat;
+      position: absolute;
+      background-position:60% 0%;
+      float: left;
+      display: block;
+      width: 25%;
+      height: 100%;
+      background-size: cover;
+    }
+    #blogin_img2{
+      background:url( "https://cdn.pixabay.com/photo/2019/11/10/11/13/couple-4615557_960_720.jpg")center no-repeat;
+      position: absolute;
+      background-position:55% 0%;
+      float: left;
+      left: 25%;
+      display: block;
+      width: 25%;
+      height: 100%;
+      background-size: cover;
+      border-left: 1px solid lightpink;
+    }
+    #blogin_img3{
+      background:url( "https://cdn.pixabay.com/photo/2021/09/24/21/06/couple-6653517_960_720.jpg")center no-repeat;
+      position: absolute;
+      background-position:70% 0%;
+      float: left;
+      left: 50%;
+      display: block;
+      width: 25%;
+      height: 100%;
+      background-size: cover;
+      border-left: 1px solid lightpink;
+    }
+    #blogin_img4{
+      background:url("https://cdn.pixabay.com/photo/2014/12/16/22/41/couple-570903_960_720.jpg")center no-repeat;
+      position: absolute;
+      background-position:60% 0%;
+      float: left;
+      left: 75%;
+      display: block;
+      width: 24.9%;
+      height: 100%;
+      background-size: cover;
+      border-left: 1px solid lightpink;
+    }
+    #blogin_btn{
+      position: absolute;
+      left:35%;
+      top:88%;
+      background:none;
+    }
+    #blogin_title{
+      position: absolute;
+      left: 31%;
+      top: 5%;
+      background:none;
+    }
+
+    .blogin_title{
+    font-size: 75px;
+    color:black;
+    text-shadow: 3px 3px 10px ghostwhite;
+    padding: 0.3rem;
+    text-decoration: none;
+    font-family: 'Cafe24Ssukssuk';
+    width: 100%;
+    font-weight: bold;
+    }
+    .blogin_write{
+    font-size: 40px;
+    color:honeydew;
+    border: 1px solid lightpink;
+    border-radius: 10rem;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.404);
+    font-family: 'SangjuDajungdagam';
+    position: relative;
+    }
+    .blogin_write:hover {
+    color: rgb(255, 5, 121);
+    font-weight: bold;
+    transition: color 1s;
+    background-color: honeydew;
+    animation: none;
+    }   
+  </style>
+
+<section style="margin: 0;">
+  <div style="margin:0; text-align:center; padding:0px;">  
+    <span id="blogin_img1"></span>
+    <span id="blogin_img2"></span>
+    <span id="blogin_img3"></span>
+    <span id="blogin_img4"></span>
+    <span id="blogin_title">
+      <a class="blogin_title" href={% url 'accountapp:blogin' %}>
+        우리들의 비밀 이야기
+      </a>
+    </span>
+    <span id="blogin_btn">
+      <a class="blogin_write" href={% url 'accountapp:login' %}>
+        "당신의 연애를 기록하세요"
+      </a>
+  </span>
+  </div>
+
+
+  <div style="margin:0; text-align:center; padding:0px;">
+    
+  </div>
+</section>
+  </body>
+
+{% endblock %}

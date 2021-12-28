@@ -1,95 +1,35 @@
 {% extends 'base.html'%}
+{% include "header.html" %}
 {% block content %}
+{% load static %}
+
 <body>
-<meta charset='utf-8' />
-    <link href='../../static/fullcalendar/main.css' rel='stylesheet' />
-    <script src='../../static/fullcalendar/main.js'></script>
-    <script src='../../static/fullcalendar/ko.js'></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+  <link rel="stylesheet" href="{% static 'calendar/calendar.css' %}">
 
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    eventClick: function(info) {
-      var eventObj = info.event;
-
-      if (eventObj.url) {
-        alert(
-          'Clicked ' + eventObj.title + '.\n' +
-          'Will open ' + eventObj.url + ' in a new tab'
-        );
-
-        window.open(eventObj.url);
-
-        info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
-      } else {
-        alert('Clicked ' + eventObj.title);
-      }
-    },
-    initialDate: new Date(),
-    events: [
-      {
-        title: 'simple event',
-        start: '2021-12-02'
-      },
-      {
-        title: 'event with URL',
-        url: 'https://www.google.com/',
-        start: '2021-12-03'
-      }
-    ]
-    ,locale: 'ko',
-  });
-
-  calendar.render();
-});
-      // document.addEventListener('DOMContentLoaded', function() {
-      //   var calendarEl = document.getElementById('calendar');
-
-      //   var calendar = new FullCalendar.Calendar(calendarEl, {
-      //     locale: 'ko',
-      //     headerToolbar: {
-      //       left: 'prev,next today',
-      //       center: 'title',
-      //       right: 'dayGridMonth,timeGridDay,listMonth'
-      //     },
-      //     initialDate: new Date(),
-      //     navLinks: true, // can click day names to navigate views
-      //     businessHours: true, // display business hours
-      //     editable: true,
-      //     selectable: true,
-      //     events: [
-      //     {
-      //       title: 'event with URL',
-      //       url: 'https://www.google.com/',
-      //       start: '2021-12-03'
-      //     } 
-      //     ]
-      //   });
-
-      //   calendar.render();
-      // });
-    </script>
-
-    <style>
-      body {
-        margin: 1rem;
-        padding: 1rem;
-        font-size: 14px;
-      }
-
-      #calendar {
-        max-width: 1100px;
-        width: 70%;
-        margin: 0 auto;
-      }
-
-    </style>
-
-
-  {%if user.is_authenticated %}
-  <div id='calendar'></div>
-  {%endif%}
+    <div class="calendar">
+      <div class="header">
+          <div class="year-month"></div>
+          <div class="nav">
+              <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+              <button class="nav-btn go-today" onclick="goToday()">Today</button>
+              <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+          </div>
+      </div>
+      <div class="main">
+          <div class="days">
+              <div class="day">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day">토</div>
+          </div>
+          <div class="dates"></div>
+      </div>
+  </div>
+  <script src="{% static 'calendar/calendar.js' %}"></script>
   
 </body>
+
 {% endblock %}

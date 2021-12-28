@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 def blogin(request):
     return render(request, 'accountapp/blogin.html')
 
+def main(request):
+    return render(request, 'accountapp/main.html')
+
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
