@@ -1,5 +1,5 @@
 *{
-    font-family: 'SangjuDajungdagam';
+    font-family: 'JalpullineunHaru';
 }
 
 
@@ -8,6 +8,7 @@ html{
 }
 a{
     color:rgb(102, 36, 163);
+    font-family: 'SangjuDajungdagam';
 }
 a:hover{
     color:pink;
@@ -18,7 +19,7 @@ a:hover{
 .loginForm{
     background-color: lavenderblush;
     display: inline-block;
-    width: 30%;
+    width: 25%;
     height: 58%;
     border-radius: 0.3rem;
     box-shadow:5px 5px 5px 5px rgba(137, 43, 226, 0.438);
@@ -27,7 +28,7 @@ a:hover{
     border: lightcoral;
     text-align: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.5rem;
 }
 .createForm{
     background-color: lavenderblush;
@@ -45,7 +46,7 @@ a:hover{
 }
 .idForm{
     margin: 1.4rem;
-    font-size: 1.3rem; 
+    font-size: 1rem; 
 }
 .id {
     width: 50%;
@@ -69,8 +70,9 @@ a:hover{
     background-position: left;
     background-size: 200%;
     color:white;
+    font-family: 'SangjuDajungdagam';
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     border:none;
     border-radius: 3rem;
     cursor:pointer;

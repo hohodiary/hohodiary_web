@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% include "header.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<body>
+  <style>
+    *{
+        box-sizing: border-box;
+      }
+    html,body{
+        margin:0;
+        padding:0;
+    }
+    .main_box{
+      background: url('https://cdn.pixabay.com/photo/2021/06/11/11/44/love-6328393_960_720.jpg') center center no-repeat;
+      background-size: contain;
+      min-width: 300px;
+      min-height: 300px;
+      box-sizing: border-box;
+      padding:0;
+    }
+  </style>
+
+
+    <div class="main_box">
+      <a class="blogin_write" href={% url 'calendarapp:calendar' %}>
+        달력!
+      </a>
+    </div>
+  </body>
+  {% endif %}
+
+{% endblock %}
