@@ -1,0 +1,190 @@
+body,html,a,div,span{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+}
+html{
+    background-color: lavender !important;
+}
+#main {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 657px;
+}
+.wrap{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    margin: 0 auto
+}
+#main a{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #101111;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    transition: 1s;
+    color:rgba(248, 248, 255, 0);
+}
+#main a:hover{
+    color:rgb(252, 87, 114);    
+}
+img{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+}
+
+    /* b */
+  .b_wrap{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 50%;
+    line-height: 0;
+  }
+  .b_a{
+    width: 100%;
+    background-image: url('../static/사진/호랑이.jpg');
+    background-size: cover !important;
+    border: ghostwhite solid 1px;
+  }
+  .b_a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    font-weight: bold;
+  }
+  .b_a img{
+    float: right;
+    width: 100%;
+    border: none;
+  }
+  .b_a img:hover{
+    background: rgba(37, 36, 36, 0.712);
+    transition: 1s;
+  }
+  .b_a span{
+    left: 0;
+    bottom: 13%;
+    width: 100%;
+    font-size: 200%;
+    line-height: 2.083vw;
+    letter-spacing: 1vw;
+    text-indent: 1.041vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    font-weight: 200;
+    color: #fff
+  }
+  .b2_a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .b2_a{
+    width: 100%;
+    border: ghostwhite solid 1px;
+    background-image: url('../static/사진/커플삽화.jpg'),
+    url('../static/사진/camfire.jpg');
+    background-size: 50% , 60% !important;
+    background-position: left , 110% 50% !important;
+    border: ghostwhite solid 1px;
+  }
+  .b2_a img{
+    float: right;
+    width: 24.5%;
+    border: none;
+  }
+
+    /* c */
+  .c_wrap{
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    width: 50%;
+    height: 100%;
+    line-height: 0;
+  }
+  .c_a{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-image: url('../static/사진/봄.jpg'),
+    url('../static/사진/여름.jpg');
+    background-position: left, 100% !important;
+    background-size: 50%, 50% !important;
+  }
+  .c_a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .c_a img{
+    float: right;
+    width: 50%;
+    border: none ;
+    border: 1px solid ghostwhite ;
+  }
+  .c_a img:hover{
+    background: rgba(37, 36, 36, 0.712);
+    transition: 1s;
+    border:none
+  }
+  .c_a span{
+    left: 0;
+    bottom: 13%;
+    width: 100%;
+    font-size: 210%;
+    line-height: 2.083vw;
+    letter-spacing: 1vw;
+    text-indent: 1.041vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    font-weight: bold;
+  }
+  .c3_a{
+    width: 50%;
+    background-image: url('../static/사진/가을.jpg'),
+    url('../static/사진/겨울.jpg');
+    background-position: left, 100% !important;
+    background-size: 50%,50% !important;
+  }
+  .c3_a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .c3_a img{
+    float: right;
+    width: 50%;
+    border: 1px solid ghostwhite;
+  }
+  .c3_a img:hover{
+    background: rgba(37, 36, 36, 0.712);
+    transition: 1s;
+    border: none;
+  }
+  .c3_a span{
+    left: 0;
+    bottom: 13%;
+    width: 100%;
+    font-size: 210%;
+    line-height: 2.083vw;
+    letter-spacing: 1vw;
+    text-indent: 1.041vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    font-weight: bold;
+  }
