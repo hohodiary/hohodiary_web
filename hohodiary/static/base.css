@@ -1,10 +1,13 @@
 *{
     font-family: 'JalpullineunHaru';
 }
-
-
-html{
+html,body{
     background-color:lavender;
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    height: 100%;
 }
 a{
     color:rgb(102, 36, 163);
@@ -16,54 +19,65 @@ a:hover{
 
 
 /* login */
+#login{
+    background: url(../static/사진/love.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+#login header .title{
+    margin:0;
+    padding:2rem;
+    font-size: 4rem;
+}
+#login header .title a{
+    color:ghostwhite;
+}
+#login header .title a:hover{
+    color: pink;
+}
+#login form{
+    margin: 1.3rem;
+}
 .loginForm{
-    background-color: lavenderblush;
+    background-color: rgba(37, 36, 36, 0.863);
     display: inline-block;
-    width: 25%;
-    height: 58%;
+    width: 30%;
+    height: 60%;
     border-radius: 0.3rem;
-    box-shadow:5px 5px 5px 5px rgba(137, 43, 226, 0.438);
-    padding: 2rem;
+    box-shadow:1px 1px 10px 5px black;
+    padding: 1.5rem;
     margin: 1rem;
-    border: lightcoral;
     text-align: center;
     align-items: center;
     font-size: 0.5rem;
+    color: ghostwhite;
 }
-.createForm{
-    background-color: lavenderblush;
-    display: inline-block;
-    width: 30%;
-    height: 61%;
-    border-radius: 0.3rem;
-    box-shadow:5px 5px 5px 5px rgba(137, 43, 226, 0.438);
-    padding: 2rem;
-    margin: 1rem;
-    border: lightcoral;
-    text-align: center;
-    align-items: center;
-    font-size: 1rem;
+#login .to_create{
+    margin:1rem;
 }
 .idForm{
-    margin: 1.4rem;
+    margin: 1.2rem;
     font-size: 1rem; 
 }
 .id {
     width: 50%;
     border:none;
-    border-bottom: 0.1rem solid rgba(137, 43, 226, 0.479);
+    border-bottom: 0.1rem solid ghostwhite;
     outline:none;
-    color: #636e72d2;
+    color: ghostwhite;
     font-size: 1rem;
     height:1rem;
     margin: 1rem;
     padding:0.5rem;
     background: none;
-
 }
-
 .btn {
-    margin-bottom: 20px;
     width:30%;
     height:40px;
     background: linear-gradient(125deg,#81afec,#c05ce7,#df81ec);
@@ -71,7 +85,6 @@ a:hover{
     background-size: 200%;
     color:white;
     font-family: 'SangjuDajungdagam';
-    font-weight: bold;
     font-size: 18px;
     border:none;
     border-radius: 3rem;
@@ -81,4 +94,77 @@ a:hover{
 }
 .btn:hover {
     background-position: right;
+    font-weight: bold;
+}
+/* create */
+#create{
+    background: url(../static/사진/love.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+#create header .title{
+    margin:0;
+    padding:2rem;
+    font-size: 4rem;
+}
+#create header .title a{
+    color:ghostwhite;
+}
+#create header .title a:hover{
+    color: pink;
+}
+#create form{
+    margin: 1rem;
+}
+.createForm{
+    background-color: rgba(37, 36, 36, 0.863);
+    display: inline-block;
+    width: 30%;
+    height: 55%;
+    border-radius: 0.3rem;
+    box-shadow:1px 1px 10px 5px black;
+    padding: 1.5rem;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-size: 0.5rem;
+    color: ghostwhite;
+}
+
+/* header */
+header{
+    text-align: center;
+
+}
+header hr{
+    margin:1rem auto;
+    border:0;
+    height:1px;
+    background-color: rgba(137, 43, 226, 0.253);
+    width:30%
+}
+header span{
+    padding:1rem;
+}
+header .title{
+    font-size: 3rem; 
+    margin: 2rem 2rem; 
+    text-shadow: 3px 3px 3px rgb(176, 164, 240);
+}
+header .title a{
+    text-decoration: none;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    margin:1rem auto;
+    color: rgba(43, 55, 226, 0.788);
+    clear: left;
 }

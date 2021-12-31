@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
-{% include "header.html" %}
+
 {% block content %}
 
 {% if user.is_authenticated %}
 <body>
+  {% include "header.html" %}
   <style>
-    *{
-        box-sizing: border-box;
-      }
-    html,body{
-        margin:0;
-        padding:0;
+    #calendar_box{
+      margin: auto 25%;
+      width: 25%;
+      height: 30%;
+      background-color: rgba(137, 43, 226, 0.281);
+      float: left;
+      text-align: center;
+      display: inline-block;
     }
+    #calendar_box a{
+      font-size: 1.3rem;
+      text-decoration: none;
+    } 
     .main_box{
-      background: url('https://cdn.pixabay.com/photo/2021/06/11/11/44/love-6328393_960_720.jpg') center center no-repeat;
+      background: url('../../../static/사진/family.jpg') center center no-repeat;
       background-size: contain;
       min-width: 300px;
       min-height: 300px;
@@ -21,13 +28,17 @@
       padding:0;
     }
   </style>
+    <section>
+      <div id="calendar_box">
+        <a href={% url 'calendarapp:calendar' %}>
+          달력
+        </a>
+      </div>
 
-
-    <div class="main_box">
-      <a class="blogin_write" href={% url 'calendarapp:calendar' %}>
-        달력!
-      </a>
-    </div>
+      <div class="main_box">
+        <img src="../../../static/사진/ratio_4x3.png">
+      </div>
+  </section>  
   </body>
   {% endif %}
 

@@ -13,7 +13,7 @@ html{
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    line-height: 657px;
+    line-height: 660px;
 }
 .wrap{
     display: inline-block;
@@ -36,7 +36,7 @@ html{
     color:rgba(248, 248, 255, 0);
 }
 #main a:hover{
-    color:rgb(252, 87, 114);    
+    color:ghostwhite;    
 }
 img{
     display: inline-block;
@@ -132,7 +132,6 @@ img{
   }
   .c_a img{
     float: right;
-    width: 50%;
     border: none ;
     border: 1px solid ghostwhite ;
   }
@@ -167,7 +166,6 @@ img{
   }
   .c3_a img{
     float: right;
-    width: 50%;
     border: 1px solid ghostwhite;
   }
   .c3_a img:hover{
@@ -177,7 +175,7 @@ img{
   }
   .c3_a span{
     left: 0;
-    bottom: 13%;
+    top: 13%;
     width: 100%;
     font-size: 210%;
     line-height: 2.083vw;
