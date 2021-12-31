@@ -20,7 +20,7 @@ a:hover{
 
 /* login */
 #login{
-    background: url(../static/사진/love.png);
+    background: url(../static/사진/heart.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
@@ -98,7 +98,7 @@ a:hover{
 }
 /* create */
 #create{
-    background: url(../static/사진/love.png);
+    background: url(../static/사진/heart.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
