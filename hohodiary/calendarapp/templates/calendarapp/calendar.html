@@ -1,11 +1,10 @@
 {% extends 'base.html'%}
-{% include "header.html" %}
 {% block content %}
 {% load static %}
 
 <body>
   <link rel="stylesheet" href="{% static 'calendar/calendar.css' %}">
-
+    {% include "header.html" %}
     <div class="calendar">
       <div class="header">
           <div class="year-month"></div>
