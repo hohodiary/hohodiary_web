@@ -20,9 +20,9 @@ a:hover{
 
 /* login */
 #login{
-    background: url(../static/사진/heart.jpg);
+    background: url(../static/사진/calendar.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center top;
     display: block;
     height: 100%;
@@ -100,7 +100,7 @@ a:hover{
 #create{
     background: url(../static/사진/heart.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center top;
     display: block;
     height: 100%;
@@ -165,6 +165,6 @@ header .title a{
 footer{
     text-align: center;
     margin:1rem auto;
-    color: rgba(43, 55, 226, 0.788);
+    color: ghostwhite;
     clear: left;
 }
