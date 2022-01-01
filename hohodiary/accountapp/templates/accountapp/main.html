@@ -4,40 +4,115 @@
 
 {% if user.is_authenticated %}
 <body>
-  {% include "header.html" %}
   <style>
+    html,body{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    #main{
+      width: 100%;
+      height: 133%;
+      background:url('../../../static/사진/calendar2.png')center center no-repeat;
+      background-size: cover;
+      display: block;
+      margin:0;
+      box-sizing: border-box;
+    }
+    #main header .title{
+      margin: 0;
+      padding: 2rem;
+    }
+    #main header .title a{
+      font-size: 3rem;
+    }
     #calendar_box{
-      margin: auto 25%;
-      width: 25%;
+      background: url(../../../static/사진/봄.jpg) center center no-repeat;
+      background-size: cover;
+      width: 30%;
       height: 30%;
-      background-color: rgba(137, 43, 226, 0.281);
+      border: 1px solid ghostwhite;
+      border-radius: 50%;
       float: left;
       text-align: center;
       display: inline-block;
-    }
-    #calendar_box a{
-      font-size: 1.3rem;
-      text-decoration: none;
-    } 
-    .main_box{
-      background: url('../../../static/사진/family.jpg') center center no-repeat;
-      background-size: contain;
-      min-width: 300px;
-      min-height: 300px;
       box-sizing: border-box;
       padding:0;
+      margin: 2% 7.5% 2% 12.5%;
+      font-size: 3rem;
+      text-decoration: none;
+    }
+
+    #anniversary_box{
+      background: url(../../../static/사진/여름.jpg) center center no-repeat;
+      background-size: cover;
+      width: 30%;
+      height: 30%;
+      border: 1px solid ghostwhite;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      padding:0;
+      margin: 2% 12.5% 2% 7.5%;
+      font-size: 3rem;
+      text-decoration: none;
+    }
+    #music_box{
+      background: url(../../../static/사진/가을.jpg) center center no-repeat;
+      background-size: cover;
+      width: 30%;
+      height: 30%;
+      border: 1px solid ghostwhite;
+      border-radius: 50%;
+      float: left;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      padding:0;
+      margin: 2% 7.5% 2% 12.5%;
+      font-size: 3rem;
+      text-decoration: none;
+    } 
+    #weather_box{
+      background: url(../../../static/사진/겨울.jpg) center center no-repeat;
+      background-size: cover;
+      width: 30%;
+      height: 30%;
+      border: 1px solid ghostwhite;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      padding:0;
+      margin: 2% 12.5% 2% 7.5%;
+      font-size: 3rem;
+      text-decoration: none;
+    }
+    #main footer{
+      margin:0;
+      padding:1rem;
+    }
+    #main footer div{
+      padding:0;
+      margin:0;
     }
   </style>
-    <section>
-      <div id="calendar_box">
-        <a href={% url 'calendarapp:calendar' %}>
+    <section id="main">
+      {% include "header.html" %}
+        <a id="calendar_box" href={% url 'calendarapp:calendar' %}>
           달력
         </a>
-      </div>
-
-      <div class="main_box">
-        <img src="../../../static/사진/ratio_4x3.png">
-      </div>
+        <a id="anniversary_box" href={% url 'calendarapp:calendar' %}>
+          기념일
+        </a>
+        <a id="music_box" href={% url 'calendarapp:calendar' %}>
+          노래
+        </a>
+        <a id="weather_box" href={% url 'calendarapp:calendar' %}>
+          온도
+        </a>
+      {% include "footer.html" %}
   </section>  
   </body>
   {% endif %}
