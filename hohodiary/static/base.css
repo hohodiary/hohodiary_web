@@ -10,20 +10,22 @@ html,body{
     height: 100%;
 }
 a{
-    color:rgb(102, 36, 163);
     font-family: 'SangjuDajungdagam';
+    color: ghostwhite;
+    text-shadow: 1px 1px 3px black;
 }
 a:hover{
     color:pink;
+    text-shadow: 3px 3px 3px black;
 }
 
 
 /* login */
 #login{
-    background: url(../static/사진/calendar.png);
+    background: url(../static/사진/커플삽화_노을.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: 0% 30%;
     display: block;
     height: 100%;
     box-sizing: border-box;
@@ -32,20 +34,22 @@ a:hover{
 }
 #login header .title{
     margin:0;
-    padding:2rem;
-    font-size: 4rem;
+    padding:1.5rem;
+    font-size: 3.5rem;
 }
-#login header .title a{
-    color:ghostwhite;
+#login .to_create a{
+    color: ghostwhite;
+    text-shadow: none;
+    text-decoration: underline wavy rgba(255, 192, 203, 0.438);
 }
-#login header .title a:hover{
+#login .to_create a:hover{
     color: pink;
 }
 #login form{
     margin: 1.3rem;
 }
 .loginForm{
-    background-color: rgba(37, 36, 36, 0.863);
+    background-color: rgba(37, 36, 36, 0.925);
     display: inline-block;
     width: 30%;
     height: 60%;
@@ -59,7 +63,7 @@ a:hover{
     color: ghostwhite;
 }
 #login .to_create{
-    margin:1rem;
+    margin:2rem;
 }
 .idForm{
     margin: 1.2rem;
@@ -95,13 +99,14 @@ a:hover{
 .btn:hover {
     background-position: right;
     font-weight: bold;
+    color:black;
 }
 /* create */
 #create{
-    background: url(../static/사진/heart.jpg);
+    background: url(../static/사진/커플삽화_노을.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: 0% 30%;
     display: block;
     height: 100%;
     box-sizing: border-box;
@@ -110,11 +115,8 @@ a:hover{
 }
 #create header .title{
     margin:0;
-    padding:2rem;
-    font-size: 4rem;
-}
-#create header .title a{
-    color:ghostwhite;
+    padding:1.5rem;
+    font-size: 3.5rem;
 }
 #create header .title a:hover{
     color: pink;
@@ -123,7 +125,7 @@ a:hover{
     margin: 1rem;
 }
 .createForm{
-    background-color: rgba(37, 36, 36, 0.863);
+    background-color: rgba(37, 36, 36, 0.925);
     display: inline-block;
     width: 30%;
     height: 55%;
