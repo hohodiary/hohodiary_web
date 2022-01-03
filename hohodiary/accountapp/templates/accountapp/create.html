@@ -7,10 +7,9 @@
 <body>
     <section id="create">
     {% include "header.html" %}
-        <div style="text-align: center; margin: 1rem;">
-        <span class="createForm">
+        <div class="createForm">
             <form action="{% url 'accountapp:create' %}" method="post">{% csrf_token %}
-                <span style="font-size: 2rem;">회원 가입</span>
+                <span>회원 가입</span>
             {% for field in form %}
                 <div class="idForm">
                     <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
@@ -20,12 +19,11 @@
             {% endfor %}
 
             {% if form.errors %}
-                <span style="color: red; font-size: 1rem;font-weight: bold">필수 항목입니다<br></span>
+                <div class="error">필수 항목입니다 </div>
             {% endif %}
                 <button type="submit" class="btn rounded-pill" onclick="button()">Create</button>
         
             </form>
-        </span>
         </div>
 </section>
 </body>

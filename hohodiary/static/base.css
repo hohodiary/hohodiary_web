@@ -2,7 +2,7 @@
     font-family: 'JalpullineunHaru';
 }
 html,body{
-    background-color:lavender;
+    background-color:black;
     margin:0;
     padding:0;
     border:0;
@@ -25,7 +25,7 @@ a:hover{
     background: url(../static/사진/커플삽화_노을.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0% 30%;
+    background-position: center 30%;
     display: block;
     height: 100%;
     box-sizing: border-box;
@@ -38,35 +38,32 @@ a:hover{
     font-size: 3.5rem;
 }
 #login .to_create a{
-    color: ghostwhite;
-    text-shadow: none;
     text-decoration: underline wavy rgba(255, 192, 203, 0.438);
 }
-#login .to_create a:hover{
-    color: pink;
-}
 #login form{
-    margin: 1.3rem;
+    margin: 1rem;
 }
 .loginForm{
     background-color: rgba(37, 36, 36, 0.925);
     display: inline-block;
     width: 30%;
-    height: 60%;
     border-radius: 0.3rem;
     box-shadow:1px 1px 10px 5px black;
     padding: 1.5rem;
     margin: 1rem;
     text-align: center;
-    align-items: center;
     font-size: 0.5rem;
     color: ghostwhite;
+}
+#login span{
+    font-size:1.9rem;
 }
 #login .to_create{
     margin:2rem;
 }
 .idForm{
     margin: 1.2rem;
+    margin-top: 1.8rem;
     font-size: 1rem; 
 }
 .id {
@@ -84,12 +81,12 @@ a:hover{
 .btn {
     width:30%;
     height:40px;
-    background: linear-gradient(125deg,#81afec,#c05ce7,#df81ec);
+    background: linear-gradient(125deg,#eea971,#e74aa0,#df81ec);
     background-position: left;
     background-size: 200%;
     color:white;
     font-family: 'SangjuDajungdagam';
-    font-size: 18px;
+    font-size: 20px;
     border:none;
     border-radius: 3rem;
     cursor:pointer;
@@ -101,12 +98,18 @@ a:hover{
     font-weight: bold;
     color:black;
 }
+.error{
+    color:red;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 0.6rem;
+}
 /* create */
 #create{
     background: url(../static/사진/커플삽화_노을.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0% 30%;
+    background-position: center 30%;
     display: block;
     height: 100%;
     box-sizing: border-box;
@@ -118,8 +121,8 @@ a:hover{
     padding:1.5rem;
     font-size: 3.5rem;
 }
-#create header .title a:hover{
-    color: pink;
+#create span{
+    font-size:1.9rem;
 }
 #create form{
     margin: 1rem;
@@ -128,13 +131,11 @@ a:hover{
     background-color: rgba(37, 36, 36, 0.925);
     display: inline-block;
     width: 30%;
-    height: 55%;
     border-radius: 0.3rem;
     box-shadow:1px 1px 10px 5px black;
     padding: 1.5rem;
     margin: auto;
     text-align: center;
-    align-items: center;
     font-size: 0.5rem;
     color: ghostwhite;
 }
@@ -146,10 +147,10 @@ header{
 }
 header hr{
     margin:1rem auto;
-    border:0;
-    height:1px;
-    background-color: rgba(137, 43, 226, 0.253);
-    width:30%
+    border-top: 1px dotted rgba(248, 248, 255, 0.37) ;
+    border-bottom:0;
+    width:40%;
+    display: inline-block;
 }
 header span{
     padding:1rem;
