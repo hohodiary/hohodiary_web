@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-        <section id="login">
-          {% include "header.html" %}  
+    <section id="login">
+    {% include "header.html" %}  
         <div class="loginForm">
             <form action="" method="post">{% csrf_token %}
-                <span style="font-size: 2rem;">로그인</span>
+                <span>로그인</span>
             {% for field in form %}
                 <div class="idForm">
                     <label form="{{ field.id_for_label }}">{{ field.label }}</label><br>
@@ -15,10 +15,9 @@
             {% endfor %}
 
             {% if form.errors %}
-                <span style="color: red; font-size: 1rem;font-weight: bold">필수 항목입니다 <br></span>
+                <div class="error">필수 항목입니다 </div>
             {% endif %}
                 <button type="submit" class="btn" onclick="button()">Start</button>
-                
                 <div class="to_create">
                     <a style="font-size: 1.3rem" href={% url 'accountapp:create' %}> 회원 가입 </a>
                 </div>
