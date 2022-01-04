@@ -11,6 +11,9 @@ def blogin(request):
 def main(request):
     return render(request, 'accountapp/main.html')
 
+def about(request):
+    return render(request, 'accountapp/about.html')
+    
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm

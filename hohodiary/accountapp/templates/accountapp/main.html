@@ -28,7 +28,6 @@
       width: 30%;
       height: 30%;
       border: 1px solid ghostwhite;
-      border-radius: 50%;
       float: left;
       text-align: center;
       display: inline-block;
@@ -45,38 +44,6 @@
       width: 30%;
       height: 30%;
       border: 1px solid ghostwhite;
-      border-radius: 50%;
-      text-align: center;
-      display: inline-block;
-      box-sizing: border-box;
-      padding:0;
-      margin: 2% 12.5% 2% 7.5%;
-      font-size: 3rem;
-      text-decoration: none;
-    }
-    #music_box{
-      background: url(../../../static/사진/가을.jpg) center center no-repeat;
-      background-size: cover;
-      width: 30%;
-      height: 30%;
-      border: 1px solid ghostwhite;
-      border-radius: 50%;
-      float: left;
-      text-align: center;
-      display: inline-block;
-      box-sizing: border-box;
-      padding:0;
-      margin: 2% 7.5% 2% 12.5%;
-      font-size: 3rem;
-      text-decoration: none;
-    } 
-    #weather_box{
-      background: url(../../../static/사진/겨울.jpg) center center no-repeat;
-      background-size: cover;
-      width: 30%;
-      height: 30%;
-      border: 1px solid ghostwhite;
-      border-radius: 50%;
       text-align: center;
       display: inline-block;
       box-sizing: border-box;
@@ -97,16 +64,10 @@
     <section id="main">
       {% include "header.html" %}
         <a id="calendar_box" href={% url 'calendarapp:calendar' %}>
-          달력
+          1
         </a>
         <a id="anniversary_box" href={% url 'calendarapp:calendar' %}>
-          기념일
-        </a>
-        <a id="music_box" href={% url 'calendarapp:calendar' %}>
-          노래
-        </a>
-        <a id="weather_box" href={% url 'calendarapp:calendar' %}>
-          온도
+          1
         </a>
       {% include "footer.html" %}
   </section>  
