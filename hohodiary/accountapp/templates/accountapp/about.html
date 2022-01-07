@@ -1,136 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
-<style>
-    #about{
-        background: url(../../../static/사진/커플삽화_코코아.jpg) center no-repeat;
-        background-size: cover;
-        display: block;
-        height: 180%;
-        box-sizing: border-box;
-        position: relative;
-        text-align: center;
-    }
-    #about header .title{
-    margin:0;
-    padding:1.5rem;
-    font-size: 3.5rem;
-    }
-    #about div{
-        color:ghostwhite;
-    }
-    #about_wrap1{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 30%;
-        margin: 3% auto 5% auto;
-    }
-    .about_1{
-        display: inline-block;
-        width: 70%;
-        height: 50%;
-        border: 1px solid blanchedalmond;
-        border-bottom: none;
-        background-color: rgba(37, 36, 36, 0.925);
-    }
-    .about_2{
-        display: inline-block;
-        width: 70%;
-        height: 50%;
-        border: 1px solid blanchedalmond;
-        background-color: rgba(37, 36, 36, 0.925);
-    }
-    #about_wrap2{
-        display: grid;
-        grid-template-rows: 50px;
-        align-items: stretch;
-        justify-items: center;
-        width: 100%;
-        height: 50%;
-        text-align: center;
-    }
-    .about_title{
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-    }
-    #about_title1{
-        display: inline-block;
-        position: relative;
-        width: 30%;
-        height: 100%;
-        border: 1px solid blanchedalmond;
-        border-radius: 30px;
-        background: linear-gradient(125deg,#eea971f3,#df81ecf1);
-        background-position: left;
-        background-size: 200%;
-    }
-    #about_title1:hover{
-        background-position: right;
-    }
-    #about_title_click{
-        display: inline-block;
-        position: relative;
-        width: 30%;
-        height: 100%;
-        border: 1px solid black;
-        border-radius: 30px;
-        background: linear-gradient(125deg,#eea971f3,#df81ecf1);
-        background-position: right;
-        background-size: 200%;
-    }
-    #about_title2{
-        display: inline-block;
-        position: relative;
-        width: 30%;
-        height: 100%;
-        border: 1px solid blanchedalmond;
-        border-radius: 30px;
-        background: linear-gradient(125deg,#eea971f3,#df81ecf1);
-        background-position: left;
-        background-size: 200%;
-    }
-    #about_title2:hover{
-        background-position: right;
-    }
-    #about_box{
-        display: block;
-        clear: both;
-        width: 50%;
-        height: 80%;
-        background-color: #eea97196;
-        opacity: 0;
-    }
-</style>
+{%load static%}
 
 <body>
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000, })
+        </script>
+
     <section id="about">
         {% include "header.html" %}
-        <div id="about_wrap1">
-            <div class="about_1">callendar</div>
-            <div class="about_2">diary</div>
+        <div id="about_wrap1" data-aos="fade-up">
+            <div id="about_1">
+                <div class="about_1_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+                <div class="about_p">
+                    <p>
+                        <h2>callendar</h2>설명설명
+                    </p>
+                </div>
+            </div>
+            <div id="about_2">
+                <div class="about_2_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+                <div class="about_p">
+                    <p>
+                        <h2>diary</h2>설명설명
+                    </p>
+                </div>
+            </div>
         </div>
         <div id="about_wrap2">
-            <div class="about_title">
-                <button id="about_title1" onclick="changeBox1()">callendar</a>
-                <button id="about_title2" onclick="changeBox2()">diary</a>
+            <div class="about_1_ex" data-aos="fade-right">
+                <img src="../../../static/사진/ratio_1x1.png">
             </div>
-            <div id="about_box">
-                box
-            </div> 
+            <div class="about_2_ex" data-aos="fade-left">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+            <div class="about_1_ex" data-aos="fade-right">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+            <div class="about_2_ex" data-aos="fade-left">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
         </div>
+        
     </section>
-    <script>
-        function changeBox1() {
-            document.querySelector('#about_box').style.backgroundColor = '#df81ecf1';
-            document.querySelector('#about_box').style.opacity = 1;
-        }
-        function changeBox2() {
-            document.querySelector('#about_box').style.backgroundColor = '#df81ecf1';
-            document.querySelector('#about_box').style.opacity = 1;
-        }
-    </script>
 </body>
 
 {% endblock %}
