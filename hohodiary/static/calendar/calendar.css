@@ -5,11 +5,12 @@
 }
 
 body {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-min-height: 100vh;
-flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: blanchedalmond;
 }
 
 .calendar {
