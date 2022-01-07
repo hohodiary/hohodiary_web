@@ -1,0 +1,128 @@
+*{
+  font-family: 'SangjuDajungdagam';
+}
+body,html,a,div,span,section{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+}
+#main {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 657px;
+    background: black;
+}
+.wrap{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    margin: 0 auto
+}
+#main a{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    transition: 1s;
+    font-weight: 300;
+}
+#main a:hover{
+    color:ghostwhite;
+    font-weight: 300;
+}
+img{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+    border: black solid 1px;
+}
+
+    /* b */
+  .b_wrap{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 50%;
+    line-height: 0;
+  }
+  .b_a{
+    background-image: url(../static/사진/커플삽화_노을.jpg);
+    background-position: center center;
+    background-size: cover !important;
+  }
+  .b_a:hover{
+    transform: scale(1.1); 
+  }
+  .b_a img{
+    float: right;
+    width: 100%;
+  }
+  .b_a img:hover{
+    background: rgba(37, 36, 36, 0.712);
+    transition:1s;
+  }
+  .b_a span{
+    left: 0;
+    top: 7%;
+    width: 100%;
+    font-size: 300%;
+    line-height: 3.4vw;
+    letter-spacing: 1vw;
+    text-indent: 1.041vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+  }
+
+    /* c */
+  .c_wrap{
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    width: 50%;
+    line-height: 0;
+  }
+  .c_a{
+    background-image: url(../static/사진/커플삽화_코코아.jpg);
+    background-size: cover !important;
+  }
+  .c_a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .c_a img{
+    float: right;
+  }
+  .c_a img:hover{
+    background: rgba(37, 36, 36, 0.712);
+    transition: 1s;
+  }
+  .c_a span{
+    left: 0;
+    bottom: 13%;
+    width: 100%;
+    font-size: 300%;
+    line-height: 3.5vw;
+    letter-spacing: 1vw;
+    text-indent: 1.041vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+  }
+
+@media all and (max-width:768px){
+  #main .b_wrap{
+    width: 100%;
+  }
+  #main .c_wrap{
+    width: 100%;
+  }
+}

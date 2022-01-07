@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000, })
+        </script>
+
+    <section id="about">
+        {% include "header.html" %}
+        <div id="about_wrap1" data-aos="fade-up">
+            <div id="about_1">
+                <div class="about_1_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+                <div class="about_p">
+                    <p>
+                        <h2>callendar</h2>설명설명
+                    </p>
+                </div>
+            </div>
+            <div id="about_2">
+                <div class="about_2_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+                <div class="about_p">
+                    <p>
+                        <h2>diary</h2>설명설명
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="about_wrap2">
+            <div class="about_1_ex" data-aos="fade-right">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+            <div class="about_2_ex" data-aos="fade-left">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+            <div class="about_1_ex" data-aos="fade-right">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+            <div class="about_2_ex" data-aos="fade-left">
+                <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+        </div>
+        
+    </section>
+</body>
+
+{% endblock %}
