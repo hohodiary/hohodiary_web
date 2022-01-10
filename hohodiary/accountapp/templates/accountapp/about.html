@@ -14,16 +14,16 @@
     <section id="about">
         {% include "header.html" %}
         <div id="about_wrap1" data-aos="fade-up">
-            <div id="about_1">
-                <div class="about_1_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+            <div class="about_box">
+                <div id="about_1_img"><img src="../../../static/사진/ratio_1x1.png"></div>
                 <div class="about_p">
                     <p>
                         <h2>callendar</h2>설명설명
                     </p>
                 </div>
             </div>
-            <div id="about_2">
-                <div class="about_2_img"><img src="../../../static/사진/ratio_1x1.png"></div>
+            <div class="about_box">
+                <div id="about_2_img"><img src="../../../static/사진/ratio_1x1.png"></div>
                 <div class="about_p">
                     <p>
                         <h2>diary</h2>설명설명
@@ -31,22 +31,33 @@
                 </div>
             </div>
         </div>
+
         <div id="about_wrap2">
-            <div class="about_1_ex" data-aos="fade-right">
-                <img src="../../../static/사진/ratio_1x1.png">
-            </div>
-            <div class="about_2_ex" data-aos="fade-left">
-                <img src="../../../static/사진/ratio_1x1.png">
-            </div>
-            <div class="about_1_ex" data-aos="fade-right">
-                <img src="../../../static/사진/ratio_1x1.png">
-            </div>
-            <div class="about_2_ex" data-aos="fade-left">
-                <img src="../../../static/사진/ratio_1x1.png">
+            <div id="about_eximg" data-aos="fade-down">
+                <img id="eximg" src="../../../static/사진/children.jpg"></div>
+            <div id="about_exbox">
+                <div class="about_ex" data-aos="fade-right">
+                    <img id="about_1_ex" src="../../../static/사진/camping.jpg" onclick="changeSRC('#about_1_ex')">
+                </div>
+                <div class="about_ex" data-aos="fade-left">
+                    <img id="about_2_ex" src="../../../static/사진/wedding.jpg" onclick="changeSRC('#about_2_ex')">
+                </div>
+                <div class="about_ex" data-aos="fade-left">
+                    <img id="about_3_ex" src="../../../static/사진/children.jpg" onclick="changeSRC('#about_3_ex')">
+                </div>
             </div>
         </div>
         
     </section>
+
+    <script>
+        var eximg = document.querySelector("#eximg");
+
+        function changeSRC(ex_id){
+            var newPic = document.querySelector(ex_id).src;
+            eximg.setAttribute("src",newPic)
+        }
+    </script>
 </body>
 
 {% endblock %}
