@@ -3,19 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+#calendar_body{
+    background: url(../사진/calendar2.png) top no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+#calendar{
+    background-color: rgba(37, 36, 36, 0.3);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
+    height: 1000px;
     flex-direction: column;
-    background-color: blanchedalmond;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
-
-.calendar {
+.calendar_box {
 width: 800px;
-margin: 50px;
+margin: 25px;
+padding: 25px;
+background:rgba(175, 238, 238, 0.356);
+border-radius: 0.5rem;
 }
 .header {
     display: flex;
@@ -64,6 +74,7 @@ flex-flow: row wrap;
 height: 500px;
 border-top: 1px solid #333333;
 border-right: 1px solid #333333;
+border-radius: 0.5rem;
 }
 
 .date {
@@ -72,16 +83,17 @@ padding: 15px;
 text-align: right;
 border-bottom: 1px solid #333333;
 border-left: 1px solid #333333;
+border-radius: 0.5rem;
 }
 
 .day:nth-child(7n + 1),
 .date:nth-child(7n + 1) {
-color: #D13E3E;
+color: #c70d0d;
 }
 
 .day:nth-child(7n),
 .date:nth-child(7n) {
-color: #396EE2;
+color: #002c8a;
 }
 
 .other {
@@ -90,7 +102,7 @@ color: #396EE2;
 
 .today {
 position: relative;
-color: #FFFFFF;
+color: #eff30e;
 }
 
 .today::before {

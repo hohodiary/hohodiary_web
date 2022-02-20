@@ -3,10 +3,12 @@
 {%load static%}
 
 {% if user.is_authenticated %}
-<body>
+
+<section id="main">
   <link rel="stylesheet" type="text/css" href={% static 'main.css' %}>
-    <section id="main">
-      {% include "header.html" %}
+  {% include "header.html" %}
+
+<body id="main_body">
       <div id="main_wrap">
         <div class="main_box">
           <a id="calendar_box" href={% url 'calendarapp:calendar' %}>
@@ -25,9 +27,10 @@
         </div>
       </div>
 
-      {% include "footer.html" %}
-  </section>  
-  </body>
+</body>
+  {% include "footer.html" %}
+</section> 
+
   {% endif %}
 
 {% endblock %}

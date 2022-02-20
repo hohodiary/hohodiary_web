@@ -2,10 +2,10 @@
 {% block content %}
 {%load static%}
 
-<body>
-  <link rel="stylesheet" type="text/css" href="{% static 'blogin.css' %}">
 
-  <section id="main">
+<section id="main">
+  <link rel="stylesheet" type="text/css" href="{% static 'blogin.css' %}">
+<body>
     <div class="wrap">
       <div class="b_wrap">
         <a href={% url 'accountapp:login' %} class="b_a">
@@ -29,7 +29,7 @@
         </a>
       </div>
     </div>
-  </section>
-</body>
 
+</body>
+</section>
 {% endblock %}
