@@ -173,130 +173,132 @@ footer{
 }
 
 /* 소개 페이지 */
-#about_body{
+#about{
     position: relative;
     background: url(../../../static/사진/커플삽화_코코아.jpg) center no-repeat;
     background-size: cover;
     height: 2000px;
 }
-#about{
-    height: 2000px;
-    background-color: rgba(75, 73, 73, 0.5);
+    #about header .title{
+        background-color: rgba(37, 36, 36, 0.3);
+        margin:0;
+        padding:1.5rem;
+        font-size: 3.5rem;
+    }
+    #about div{
+    color: black;
+    }
+#about_section{
+    height: 1890px;
+    background-color: rgba(37, 36, 36, 0.3);
     display: block;
     box-sizing: border-box;
     position: relative;
     text-align: center;
 }
-#about header .title{
-margin:0;
-padding:1.5rem;
-font-size: 3.5rem;
-}
-#about div{
-    color:ghostwhite;
-}
 
-/* wrap1 - 서비스 소개*/
-#about_wrap1{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 40%;
-    margin: 3% auto 5% auto;
-    box-shadow: 0px 0px 3px 3px black;
-}
-.about_box{
-    display: inline-block;
-    width: 100%;
-    height: 50%;
-    background-color: rgba(37, 36, 36, 0.95);
-    border-bottom: 1px solid blanchedalmond;
-    font-size: 1.5vw;
-    line-height: 5vh;
-}
-#about_1_img{
-    background: url(https://cdn.pixabay.com/photo/2020/10/14/15/56/doodles-5654738_960_720.png) center 10% no-repeat;
-    background-size: cover;
-    float:left;
-    display: inline-block;
-    vertical-align: middle;
-    width: 40%;
-    height: 100%;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transition: 1s;
-}
-#about_1_img:hover{
-    transform: scale(1.05);
-    border-radius: 10%;
-}
-.about_p{
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    text-align: left;
-    width: 60%;
-    padding-left: 2rem;
-}
-#about_2_img{
-    background: url(https://cdn.pixabay.com/photo/2021/03/14/02/51/couple-6093241_960_720.jpg) center 50%  no-repeat;
-    background-size: cover;
-    float:left;
-    display: inline-block;
-    vertical-align: middle;
-    width: 40%;
-    height: 100%;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transition: 1s;
-}
-#about_2_img:hover{
-    transform: scale(1.05);
-    border-radius: 10%;
-}
+    /* wrap1 - 서비스 소개*/
+    #about_wrap1{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 40%;
+        margin: 3% auto 5% auto;
+        box-shadow: 0px 0px 10px 3px black;
+    }
+    .about_box{
+        display: inline-block;
+        width: 100%;
+        height: 50%;
+        background-color: rgba(255, 250, 250, 0.8);
+        border: 1px solid black;
+        font-size: 1.5vw;
+        line-height: 5vh;
+    }
+    #about_1_img{
+        background: url(https://cdn.pixabay.com/photo/2020/10/14/15/56/doodles-5654738_960_720.png) center 10% no-repeat;
+        background-size: cover;
+        float:left;
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transition: 1s;
+    }
+    #about_1_img:hover{
+        transform: scale(1.05);
+        border-radius: 10%;
+    }
+    .about_p{
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        text-align: left;
+        width: 60%;
+        padding-left: 2rem;
+    }
+    #about_2_img{
+        background: url(https://cdn.pixabay.com/photo/2021/03/14/02/51/couple-6093241_960_720.jpg) center 50%  no-repeat;
+        background-size: cover;
+        float:left;
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transition: 1s;
+    }
+    #about_2_img:hover{
+        transform: scale(1.05);
+        border-radius: 10%;
+    }
 
-/* wrap2 - 사진예시 */
-#about_wrap2{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 40%;
-    margin: 3% auto 5% auto;
-    padding: 2%;
-    background-color: rgba(37, 36, 36, 0.95);
-    border: 1px solid black;
-    border-radius: 2%;
-    box-shadow: 0px 0px 3px 3px black;
-}
-#about_eximg{
-    display: inline-block;
-    width: 80%;
-    height: 70%;
-    box-sizing: border-box;
-}
-#about_eximg img{
-    max-width: 100%;
-    max-height: 90%;
-}
-#about_exbox{
-    display: inline-grid;
-    grid-template-columns: repeat(4,250px);
-    grid-template-rows: repeat(1,200px);
-    width: 80%;
-    box-sizing: border-box;
-    justify-content: center;
-}
-.about_ex{
-    background: black;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-}
-.about_ex img{
-    width: 250px;
-    height: 200px;
-    border: 1px solid blanchedalmond;
-}
+    /* wrap2 - 사진예시 */
+    #about_wrap2{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 40%;
+        margin: 3% auto 5% auto;
+        padding: 2%;
+        background-color: rgba(255, 250, 250, 0.8);
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 3px black;
+    }
+    #about_eximg{
+        display: inline-block;
+        width: 80%;
+        height: 70%;
+        box-sizing: border-box;
+    }
+    #about_eximg img{
+        max-width: 100%;
+        max-height: 90%;
+        border: 1px solid black;
+    }
+    #about_exbox{
+        display: inline-grid;
+        grid-template-columns: repeat(4,250px);
+        grid-template-rows: repeat(1,200px);
+        width: 80%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    .about_ex{
+        background: black;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .about_ex img{
+        width: 250px;
+        height: 200px;
+        border: 1px solid black;
+    }

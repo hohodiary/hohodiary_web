@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-{%load static%}
-
-<section id="about">
-    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<body id="about">    
     {% include "header.html" %}
-    
-<body id="about_body">
+    <section id="about_section">
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
@@ -63,6 +61,6 @@
             eximg.setAttribute("src",newPic)
         }
     </script>
-</body>
 </section>
+</body>
 {% endblock %}
