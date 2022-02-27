@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<body id="diary">
+  <section id="diary">
+  {% include "header.html" %}
+
+    <div>diary list</div>
+
+  </section> 
+  {% include "footer.html" %}
+</body>
+{% endif %}
+
+{% endblock %}
+

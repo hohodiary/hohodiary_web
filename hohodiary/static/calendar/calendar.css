@@ -3,17 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-#calendar_body{
+#calendar{
     background: url(../사진/calendar2.png) top no-repeat;
     background-size: cover;
     height: 1000px;
 }
-#calendar{
+    #calendar header{
+        background-color: rgba(37, 36, 36, 0.3);
+    }
+        #calendar header .title{
+            margin:0;
+            padding:1.5rem;
+            font-size: 3.5rem;
+        }
+#calendar_section{
     background-color: rgba(37, 36, 36, 0.3);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 1000px;
+    height: 767px;
     flex-direction: column;
     position: relative;
     width: 100%;
@@ -27,94 +35,92 @@ padding: 25px;
 background:rgba(175, 238, 238, 0.356);
 border-radius: 0.5rem;
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .calendar_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .year-month {
+        font-size: 35px;
+        }
+        .nav {
+        display: flex;
+        border: 1px solid #333333;
+        border-radius: 20px;
+        }
+            .nav-btn {
+            width: 28px;
+            height: 30px;
+            border: none;
+            font-size: 16px;
+            line-height: 34px;
+            background-color: transparent;
+            cursor: pointer;
+            }
+            .go-today {
+            width: 75px;
+            border-left: 1px solid #333333;
+            border-right: 1px solid #333333;
+            }
+        .days {
+            display: flex;
+            margin: 25px 0 10px;
+        }
+            .day {
+            width: calc(100% / 7);
+            text-align: center; 
+            }
+        .dates {
+        display: flex;
+        flex-flow: row wrap;
+        height: 500px;
+        border-top: 1px solid #333333;
+        border-right: 1px solid #333333;
+        border-radius: 0.5rem;
+        }
+    .date {
+    width: calc(100% / 7);
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+    border-radius: 0.5rem;
+    }
+    .day:nth-child(7n + 1),
+    .date:nth-child(7n + 1) {
+    color: #c70d0d;
+    }
+    .day:nth-child(7n),
+    .date:nth-child(7n) {
+    color: #002c8a;
+    }
+    .other {
+        opacity: .3;
+    }
+    .today {
+    position: relative;
+    color: #eff30e;
+    }
+        .today::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(102, 36, 163);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        }
 
-.year-month {
-font-size: 35px;
-}
-
-.nav {
-display: flex;
-border: 1px solid #333333;
-border-radius: 20px;
-}
-
-.nav-btn {
-width: 28px;
-height: 30px;
-border: none;
-font-size: 16px;
-line-height: 34px;
-background-color: transparent;
-cursor: pointer;
-}
-
-.go-today {
-width: 75px;
-border-left: 1px solid #333333;
-border-right: 1px solid #333333;
-}
-.days {
-    display: flex;
-    margin: 25px 0 10px;
-}
-
-.day {
-width: calc(100% / 7);
-text-align: center; 
-}
-
-.dates {
-display: flex;
-flex-flow: row wrap;
-height: 500px;
-border-top: 1px solid #333333;
-border-right: 1px solid #333333;
-border-radius: 0.5rem;
-}
-
-.date {
-width: calc(100% / 7);
-padding: 15px;
-text-align: right;
-border-bottom: 1px solid #333333;
-border-left: 1px solid #333333;
-border-radius: 0.5rem;
-}
-
-.day:nth-child(7n + 1),
-.date:nth-child(7n + 1) {
-color: #c70d0d;
-}
-
-.day:nth-child(7n),
-.date:nth-child(7n) {
-color: #002c8a;
-}
-
-.other {
-    opacity: .3;
-}
-
-.today {
-position: relative;
-color: #eff30e;
-}
-
-.today::before {
-position: absolute;
-top: 50%;
-left: 50%;
-z-index: -1;
-display: block;
-width: 30px;
-height: 30px;
-background-color: rgb(102, 36, 163);
-border-radius: 50%;
-transform: translate(-50%, -50%);
-content: '';
-}
+    #calendar footer{
+        background-color: rgba(37, 36, 36, 0.3);
+        margin: 0;
+        padding: 1rem;
+    }
+        #calendar footer div{
+            padding:0;
+            margin:0;
+        }

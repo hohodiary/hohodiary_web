@@ -3,33 +3,31 @@
 {%load static%}
 
 {% if user.is_authenticated %}
+<link rel="stylesheet" type="text/css" href={% static 'main.css' %}>
 
-<section id="main">
-  <link rel="stylesheet" type="text/css" href={% static 'main.css' %}>
+<body id="main">
   {% include "header.html" %}
-
-<body id="main_body">
-      <div id="main_wrap">
+  <section id="main_section">
+    <div id="main_wrap">
         <div class="main_box">
           <a id="calendar_box" href={% url 'calendarapp:calendar' %}>
             <img src="../../../static/사진/ratio_1x1.png"></a>
-          <p>></p>
+          <p>달력</p>
+        </div>
+        <div class="main_box">
+          <a id="diary_box" href={% url 'calendarapp:calendar' %}>
+            <img src="../../../static/사진/ratio_1x1.png"></a>
+          <p>일기</p>
         </div>
         <div class="main_box">
           <a id="diary_box" href={% url 'calendarapp:calendar' %}>
             <img src="../../../static/사진/ratio_1x1.png"></a>
           <p>?</p>
         </div>
-        <div class="main_box">
-          <a id="diary_box" href={% url 'calendarapp:calendar' %}>
-            <img src="../../../static/사진/ratio_1x1.png"></a>
-          <p>?</p>
-        </div>
-      </div>
-
-</body>
+    </div>
+  </section> 
   {% include "footer.html" %}
-</section> 
+</body>
 
   {% endif %}
 

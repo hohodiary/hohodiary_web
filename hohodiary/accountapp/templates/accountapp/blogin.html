@@ -2,34 +2,32 @@
 {% block content %}
 {%load static%}
 
-
-<section id="main">
-  <link rel="stylesheet" type="text/css" href="{% static 'blogin.css' %}">
-<body>
+<link rel="stylesheet" type="text/css" href="{% static 'blogin.css' %}">
+<body id="main">
+  <section>  
     <div class="wrap">
-      <div class="b_wrap">
-        <a href={% url 'accountapp:login' %} class="b_a">
-          <div>
-          <span>우리들의 비밀 이야기<br>시작하기</span>
-          </div>
-          <div>
-            <img src="../../../static/사진/ratio_1x1.png">
-          </div>
-        </a>   
-      </div>
+        <div class="b_wrap">
+          <a href={% url 'accountapp:login' %} class="b_a">
+            <div>
+            <span>우리들의 비밀 이야기<br>시작하기</span>
+            </div>
+            <div>
+              <img src="../../../static/사진/ratio_1x1.png">
+            </div>
+          </a>   
+        </div>
 
-      <div class="c_wrap">
-        <a href={% url 'accountapp:about' %} class="c_a">
-          <div>
-            <span>About us<br>"당신의 연애를 기록하세요"</span>
-          </div>
-          <div>
-            <img src='../../../static/사진/ratio_1x1.png'>
-          </div>
-        </a>
-      </div>
+        <div class="c_wrap">
+          <a href={% url 'accountapp:about' %} class="c_a">
+            <div>
+              <span>About us<br>"당신의 연애를 기록하세요"</span>
+            </div>
+            <div>
+              <img src='../../../static/사진/ratio_1x1.png'>
+            </div>
+          </a>
+        </div>
     </div>
-
+  </section>
 </body>
-</section>
 {% endblock %}

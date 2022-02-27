@@ -1,13 +1,21 @@
-#main_body{
+#main{
     height:1300px;
     background:url(../../../static/사진/커플삽화_노을.jpg) center top no-repeat;
     background-size: cover;
 }
-
-
-#main{
+    #main header{
+        background-color: rgba(37, 36, 36, 0.3);
+    }
+        #main header .title{
+            margin: 0;
+            padding: 2rem;
+        }
+        #main header .title a{
+            font-size: 3rem;
+        }
+#main_section{
     width: 100%;
-    height: 1300px;
+    height: 1060px;
     background-color: rgba(37, 36, 36, 0.3);
     display: block;
     position:relative;
@@ -15,14 +23,6 @@
     box-sizing: border-box;
     text-align: center;
 }
-#main header .title{
-    margin: 0;
-    padding: 2rem;
-}
-#main header .title a{
-    font-size: 3rem;
-}
-
 #main_wrap{
     display: inline-block;
     box-sizing: border-box;
@@ -31,17 +31,16 @@
     text-align: center;
     padding: 1rem;
 }
-
 .main_box{
     display: inline-block;
     box-sizing: border-box;
     width: 30%;
     height: 50%;
 }
-.main_box p{
-    font-size: 1.5rem;
-    color:blanchedalmond;
-}
+    .main_box p{
+        font-size: 1.5rem;
+        color:blanchedalmond;
+    }
 #calendar_box{
     background: url(../static/사진/calendar.png) center center no-repeat;
     background-size: cover;
@@ -53,18 +52,18 @@
     padding:0;
     transition: 1s;
 }
-#calendar_box:hover{
-    transform: scale(1.1);
-}
-#calendar_box img{
-    width:100%;
-    background-color: rgb(250, 245, 245);
-    border-radius: 50%;
-    transition:0.8s;
-}
-#calendar_box img:hover{
-    opacity:0;
-}
+    #calendar_box:hover{
+        transform: scale(1.1);
+    }
+    #calendar_box img{
+        width:100%;
+        background-color: rgb(250, 245, 245);
+        border-radius: 50%;
+        transition:0.8s;
+    }
+        #calendar_box img:hover{
+            opacity:0;
+        }
 #diary_box{
     background: url(../static/사진/커플삽화_대화.jpg) center center no-repeat;
     background-size: cover;
@@ -76,25 +75,26 @@
     padding:0;
     transition: 1s;
 }
-#diary_box:hover{
-    transform: scale(1.1);
-}
-#diary_box img{
-    width:100%;
-    background-color: rgb(250, 245, 245);
-    background-size:cover;
-    border-radius: 50%;
-    transition:0.8s;
-}
-#diary_box img:hover{
-    opacity:0;
-}
+    #diary_box:hover{
+        transform: scale(1.1);
+    }
+    #diary_box img{
+        width:100%;
+        background-color: rgb(250, 245, 245);
+        background-size:cover;
+        border-radius: 50%;
+        transition:0.8s;
+    }
+        #diary_box img:hover{
+            opacity:0;
+        }
 
 #main footer{
     margin:0;
     padding:1rem;
+    background-color: rgba(37, 36, 36, 0.3);
 }
-#main footer div{
-    padding:0;
-    margin:0;
-}
+    #main footer div{
+        padding:0;
+        margin:0;
+    }
