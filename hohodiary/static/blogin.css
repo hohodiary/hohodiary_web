@@ -73,8 +73,8 @@ img{
     left: 0;
     top: 7%;
     width: 100%;
-    font-size: 300%;
-    line-height: 3.4vw;
+    font-size: 3rem;
+    line-height: 6vh;
     letter-spacing: 1vw;
     text-indent: 1.041vw;
     display: inline-block;
@@ -109,8 +109,8 @@ img{
     left: 0;
     bottom: 13%;
     width: 100%;
-    font-size: 300%;
-    line-height: 3.5vw;
+    font-size: 3rem;
+    line-height: 6vh;
     letter-spacing: 1vw;
     text-indent: 1.041vw;
     display: inline-block;
@@ -118,11 +118,41 @@ img{
     position: absolute;
   }
 
+@media all and (max-width:1024px){
+  .b_a span{
+    font-size: 2rem;
+  }
+  .c_a span{
+    font-size: 2rem;
+  }
+}
+
 @media all and (max-width:768px){
   #main .b_wrap{
     width: 100%;
   }
   #main .c_wrap{
     width: 100%;
+  }
+  .b_a span{
+    font-size: 3rem; 
+    line-height: 6vh;
+    letter-spacing: 1vw;
+  }
+  .c_a span{
+    line-height: 6vh;
+    letter-spacing: 1vw; 
+    font-size: 3rem;   
+  }
+}
+
+@media all and (max-width:480px){
+  .b_a span{
+    line-height: 5vh;
+    font-size: 2rem;
+  }
+  .c_a span{
+    line-height: 5vh;   
+    font-size: 2rem;
   }
 }
