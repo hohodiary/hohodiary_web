@@ -13,12 +13,17 @@ a{
     font-family: 'SangjuDajungdagam';
     color: ghostwhite;
     text-shadow: 1px 1px 3px black;
+    transition: 0.5s;
 }
 a:hover{
-    color:pink;
-    text-shadow: 3px 3px 3px black;
+    color: lightyellow;
+    text-shadow: 2px 2px 3px darksalmon;
 }
-
+.flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* login */
 #login{
@@ -173,207 +178,14 @@ footer{
     clear: left;
 }
 
-/* 소개 페이지 */
-#about{
-    position: absolute;
-    background: url(../../../static/사진/커플삽화_코코아.jpg) center no-repeat;
-    background-size: cover;
-    height: auto;
-    width: 100%;
-    height: 250%;
-}
-    #about header{
-        height:10%;
-        background-color: rgba(37, 36, 36, 0.3);
-    }
-    #about header .title{
-        margin:0;
-        padding:1.5rem;
-        font-size: 9vh;
-    }
-    #about div{
-    color: black;
-    }
-#about_section{
-    width: 100%;
-    height: 90%;
-    background-color: rgba(37, 36, 36, 0.3);
-    display: block;
-    box-sizing: border-box;
-    position: relative;
-    text-align: center;
-}
 
-    /* wrap1 - 서비스 소개*/
-    #about_wrap1{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        height: 40%;
-        margin: 3% auto 5% auto;
-    }
-    .about_box{
-        display: block;
-        width: 100%;
-        height: 50%;
-        background-color: rgba(255, 250, 250, 0.8);
-        border: 1px solid black;
-        font-size: 1.3vw;
-        line-height: 5vh;
-    }
-    #about_1_img{
-        background: url(https://cdn.pixabay.com/photo/2020/10/14/15/56/doodles-5654738_960_720.png) center 10% no-repeat;
-        background-size: cover;
-        float:left;
-        display: inline-block;
-        vertical-align: middle;
-        width: 30%;
-        height: 100%;
-        margin-left: 2%;
-        box-sizing: border-box;
-        border-radius: 50%;
-        transition: 1s;
-    }
-    #about_1_img:hover{
-        transform: scaleX(1.05);
-        border-radius: 10%;
-    }
-    .about_p{
-        display: inline-block;
-        vertical-align: middle;
-        box-sizing: border-box;
-        text-align: left;
-        width: 65%;
-        padding-left: 2rem;
-    }
-    #about_2_img{
-        background: url(https://cdn.pixabay.com/photo/2021/03/14/02/51/couple-6093241_960_720.jpg) center 50%  no-repeat;
-        background-size: cover;
-        float:left;
-        display: inline-block;
-        vertical-align: middle;
-        width: 30%;
-        height: 100%;
-        margin-left: 2%;
-        box-sizing: border-box;
-        border-radius: 50%;
-        transition: 1s;
-    }
-    #about_2_img:hover{
-        transform: scaleX(1.1);
-        border-radius: 10%;
-    }
 
-    /* wrap2 - 사진예시 */
-    #about_wrap2{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: 40%;
-        margin: 3% auto 5% auto;
-        padding: 2%;
-        background-color: rgba(255, 250, 250, 0.8);
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 3px black;
-    }
-    #about_eximg{
-        display: inline-block;
-        width: 100%;
-        height: 70%;
-        box-sizing: border-box;
-    }
-    #about_eximg img{
-        max-width: 100%;
-        max-height: 90%;
-        border: 1px solid black;
-    }
-    #about_exbox{
-        display: inline-grid;
-        grid-template-columns: repeat(4,25%);
-        grid-template-rows: repeat(1,100%);
-        width: 95%;
-        height: 30%;
-        box-sizing: border-box;
-        justify-content: center;
-    }
-    .about_ex{
-        background: black;
-        display: inline-block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .about_ex img{
-        width: 100%;
-        height: 100%;
-        border: 1px solid black;
-    }
-
-@media all and (max-width:1024px){
-    .about_box{
-        font-size: 3vw;
-        line-height: 3vh;
-    }
-    #about_1_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    .about_p{
-        width: 100%;
-        height: 60%;
-    }
-    #about_2_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    #about_eximg{
-        height:60%;
-    }
-    #about_exbox{
-        grid-template-columns: repeat(2,50%);
-        grid-template-rows: repeat(2,50%);
-        width: 95%;
-        height: 40%;
-    }
-}
 @media all and (max-width:768px){
     .loginForm{
         width: 40%;
     }
     .createForm{
         width: 40%;
-    }
-    #about_1_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    .about_p{
-        width: 100%;
-        height: 60%;
-    }
-    #about_2_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    .about_box{
-        font-size: 3vw;
-        line-height: 3vh;
-    }
-    #about_eximg{
-        height:60%;
-    }
-    #about_exbox{
-        grid-template-columns: repeat(2,50%);
-        grid-template-rows: repeat(2,50%);
-        width: 95%;
-        height: 40%;
     }
 }
 @media all and (max-width:480px){
@@ -382,38 +194,5 @@ footer{
     }
     .createForm{
         width: 70%;
-    }
-    #about header .title{
-        margin:0;
-        padding:1.5rem;
-        font-size: 5vh;
-    }
-    .about_box{
-        font-size: 5vw;
-        line-height: 3vh;
-    }
-    #about_1_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    .about_p{
-        width: 100%;
-        height: 60%;
-    }
-    #about_2_img{
-        width: 100%;
-        height: 40%;
-        margin: 0;
-    }
-    #about_eximg{
-        height:0%;
-        opacity: 0;
-    }
-    #about_exbox{
-        grid-template-columns: repeat(1,100%);
-        grid-template-rows: repeat(4,25%);
-        width: 95%;
-        height: 95%;
     }
 }

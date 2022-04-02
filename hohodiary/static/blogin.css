@@ -56,11 +56,11 @@ img{
   .b_a{
     background-image: url(../static/사진/커플삽화_노을.jpg);
     background-position: center center;
-    background-size: cover !important;
+    background-size: 100%;
   }
-  .b_a:hover{
-    transform: scale(1.1); 
-  }
+    .b_a:hover{
+      background-size: 120%;
+    }
   .b_a img{
     float: right;
     width: 100%;
@@ -91,12 +91,11 @@ img{
     line-height: 0;
   }
   .c_a{
-    background-image: url(../static/사진/커플삽화_코코아.jpg);
-    background-size: cover !important;
+    background: url(../static/사진/커플삽화_코코아.jpg) center;
+    background-size: 100%;
   }
   .c_a:hover{
-    transform: scale(1.1);
-    transition: 1s;
+    background-size: 120%;
   }
   .c_a img{
     float: right;
